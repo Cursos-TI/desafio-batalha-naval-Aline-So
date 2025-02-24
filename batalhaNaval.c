@@ -11,19 +11,34 @@ int main() {
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
      
     char linhas[10] = {'A', 'B','C','D','E','F','G','H','I','J'};
-    int colunas = {1, 2,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10};
-     int mat [10] [10];   
+    int colunas[10] = {1, 2,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10};
+     int tabuleiro [10] [10];   
     
      printf("*** Bem Vindo ao Jogo 'BATALHA NAVAL' ***\n");
+    
+     printf(" ");
+       for(int j = 0; j < 10; j++){
+        printf("%d\n", colunas[j]);
+       for(int i = 0; i < i 10; i++) {
+        for (int j = 0; j < 10; j++){
+          printf("%d\t", tabuleiro[0][10]);
+        }
+       }
       
-      printf("  ");
+      }
+        printf("%d\t");
       for(int i = 0; i < 10; i++){
-        printf("%c ", linhas[i]);
-    } 
-      
-      for(int j = 0; j > 10; j++){
-        printf("%d\n  ", colunas[j]);
-    }
+        printf("%c    ", linhas[i]);
+         
+         }
+    
+       }
+
+    
+
+    
+
+    
 
 
 
