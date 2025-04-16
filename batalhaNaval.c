@@ -10,29 +10,29 @@ int main() {
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
      
-    char linhas[10] = {'A', 'B','C','D','E','F','G','H','I','J'};
-    int colunas[10] = {1, 2,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10};
-     int tabuleiro [10] [10];   
+    int linha[linhas];
+    char coluna[colunas];
+    int tabuleiro[linhas][colunas];
+    int navioHorizontal[NAVIO];
+    int navioVertical[NAVIO];
+    int navioDiagonalPri[NAVIO];
+    int navioDiagonalSec[NAVIO];
+   
+    #define linhas 10
+    #define colunas 10
+    #define NAVIO 3
+    #define MAR 0
     
      printf("*** Bem Vindo ao Jogo 'BATALHA NAVAL' ***\n");
     
-     printf(" ");
-       for(int j = 0; j < 10; j++){
-        printf("%d\n", colunas[j]);
-       for(int i = 0; i < i 10; i++) {
-        for (int j = 0; j < 10; j++){
-          printf("%d\t", tabuleiro[0][10]);
+     for(int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++){
+          tabuleiro[i][j] = MAR;
         }
-       }
-      
-      }
-        printf("%d\t");
-      for(int i = 0; i < 10; i++){
-        printf("%c    ", linhas[i]);
-         
-         }
+     }
     
-       }
+       //posição do navio horizontal
+       
 
     
 
