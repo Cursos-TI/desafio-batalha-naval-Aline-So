@@ -31,46 +31,74 @@ int main() {
         }
      }
     
-       //posição do navio horizontal
+       int coordenadaX = 2;
+       int coordenadaY = 3;
        
+       for (int i = 0; i < NAVIO; i++) {
+        navioHorizontal[i] = NAVIO;       
+        tabuleiro[coordenadaX][coordenadaY] = navioHorizontal[i];
+        coordenadaX++;
+      }
+       
+  coordenadaX = 5;
+  coordenadaY = 7;
 
+  for (int j = 0; j < NAVIO; j++){
+   navioVertical[j] = NAVIO;
+   tabuleiro[coordenadaX][coordenadaY] = navioVertical[j];
+   coordenadaX++;
+
+  }
+
+    int diagonalX = 1;
+
+    for (int i = 0; i < NAVIO; i++){
+
+   navioDiagonalPri[i]= NAVIO;
+   tabuleiro[diagonalX][diagonalX] = navioDiagonalPri;
+   diagonalX++;   
+    }
+
+    int diagonalSecX = 0;
     
+    for (int i = 0; i < NAVIO; i++){
+     navioDiagonalSec[i] = NAVIO;
+     tabuleiro[diagonalSecX] [9 - diagonalSecX] = navioDiagonalSec[i];
+     diagonalSecX++;
 
+    }
     
-
+    for (int i = 0; i < linhas; i++){
+      linhas[i] = + 1;
     
+    }
 
+    for (int i = 0; < colunas; i++){
+      colunas[i] = 'A' + 1;
 
-
-
-
-
-
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
-
-    // Nível Mestre - Habilidades Especiais com Matrizes
-    // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
-
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
+    }
     
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+     printf ("\n");
 
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
+     printf("**TABULEIRO BATALHA - NAVAL**\n");
+     printf("  ");
+
+     for(int i = 0; i < colunas; i++){
+      printf("%c ", colunas[i]);
+
+     }
+     
+      printf("\n");
+
+      for ( int i = 0; i < linhas; i++){
+       printf("%2d", linhas[i]);
+       for (int j =0; j < colunas; j++){
+        printf("%2d", tabuleiro[i][j]);
+       }
+      printf("\n;")
+      }
+     printf("\n");
+
 
     return 0;
 }
